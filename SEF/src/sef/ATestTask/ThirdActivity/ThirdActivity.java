@@ -12,20 +12,34 @@ public class ThirdActivity {
         ta.catchExeption();
     }
 
+
     void catchExeption() {
-        int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        try {
+            int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-        for (int i = 0; i <= 10; i++) {
-            System.out.println(arr[i]);
+            for (int i = 0; i <= 10; i++) {
+                System.out.println(arr[i]);
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(e.getStackTrace());
         }
-        System.out.println("This should get printed even if there is an exception");
-
+         finally {
+            System.out.println("Program did run");
+        }
     }
+
 
     void validateUser(String name) {
         String[] validUsers = {"John", "Mike", "Missi", "Peacy"};
-        int flag = 0;
-        //TODO if name in a list -> set flag=1
+        try {
+            int flag = 0;
+            //TODO if name in a list -> set flag=1
+            if(flag==0) throw new NullPointerException();
+        } catch (NullPointerException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            System.out.println("Program did run");
+        }
         // if at the end flag=0 -> throw the exeption
     }
 
