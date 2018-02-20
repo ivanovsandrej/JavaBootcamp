@@ -1,27 +1,33 @@
 package sef.ATestTask.FirstActivity;
 
+
+import java.util.ArrayList;
+
 public class FirstActivity {
 
 	public static void main(String[] args) {
 
-		//TODO 1 Create collection of employee (more than 5)
-		//		System.out.println() result
+		Employee employee[] = new Employee[5];
 
-		//TODO 2 sort and this employees by salary (from min to max)
-		// TIP - google bubble sort
-		//		System.out.println() result
+		employee[0] = new Employee();
+		employee[0].setFirstName("Alex");
+		employee[0].setSalary(100);
 
-		//TODO 3 create instance of the Person ->
-		// than make them Student
-		// than make them Employee
-		//		System.out.println() result
+		employee[1] = new Employee();
+		employee[1].setFirstName("May");
+		employee[1].setSalary(300);
 
-		//TODO 4 Create method for total change employee information
-		// for example some employee change his work
+		employee[2] = new Employee();
+		employee[2].setFirstName("Jay");
+		employee[2].setSalary(200);
 
+		employee[3] = new Employee();
+		employee[3].setFirstName("Ellie");
+		employee[3].setSalary(500);
 
+		employee[4] = new Employee();
+		employee[4].setFirstName("Max");
+		employee[4].setSalary(160);
 	}
 
-	
-	
 }
