@@ -12,8 +12,26 @@ public class SecondActivity {
 		//calculator.divide(100, 33);
 		// and more
 
-	}
 
 	//TODO create the Calculator (here or in additional class)
 
-}
+			public class MyCalculator {
+				public int getSum(int a, int b) {
+					return a + b;
+				}
+
+				public int getDifference(int a, int b) {
+					return a - b;
+				}
+
+				public double getProduct(double a, double b) {
+					return a * b;
+				}
+
+				public double getQuotient(double a, double b) {
+					return a / b;
+
+
+				}
+			}
+		}

@@ -27,7 +27,12 @@ public class ThirdActivity {
         int flag = 0;
         //TODO if name in a list -> set flag=1
         // if at the end flag=0 -> throw the exeption
-    }
+        for (int i = 0; i < validUsers.length; i++) {
+            if (validUsers[i].equals(name)) {
+                flag = 1;
+                break;
+
+            }
 
     void catchMe(int num1, int num2)
     {
