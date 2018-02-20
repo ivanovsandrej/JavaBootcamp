@@ -10,15 +10,25 @@ public class ThirdActivity {
         //TODO handle exception on proper way
         ta.validateUser("Ivan");
         ta.catchExeption();
-    }
+        {
+
+        }
+        }
+
+
 
     void catchExeption() {
         int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-
-        for (int i = 0; i <= 10; i++) {
-            System.out.println(arr[i]);
+        try {
+            for (int i = 0; i <= 10; i++) {
+                System.out.println(arr[i]);
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Out of range");
+        } finally {
+            System.out.println("This should get printed even if there is an exception");
         }
-        System.out.println("This should get printed even if there is an exception");
+
 
     }
 
@@ -29,14 +39,21 @@ public class ThirdActivity {
         // if at the end flag=0 -> throw the exeption
     }
 
-    void catchMe(int num1, int num2)
-    {
+    void catchMe(int num1, int num2) {
         //TODO Catch exeption
-            int result=num1/num2;
+        try {
+            int result = num1 / num2;
             System.out.println("The result is :" + result);
-
-            //TODO prints a message "Thank you for using this program." always
+        } catch (ArithmeticException e) {
+            System.out.println("Don't divide with 0");
+        } finally {
             System.out.println("Thank you for using this program.");
+        }
+
+        //TODO prints a message "Thank you for using this program." always
+
+    }
+
 
     }
 }

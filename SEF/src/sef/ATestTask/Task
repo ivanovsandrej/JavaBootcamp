@@ -25,8 +25,8 @@ Tasks
 
 5) Create unit test for ALL classes (example in EmployeeTest)
 
-6) Create good calculator in SecondActivity
-7) Add tests for calculator
+ 6) Create good calculator in SecondActivity
+ 7) Add tests for calculator
 
 8) Task for 1.5 point - when set firstName and secondName, check no numbers there. ->
 setName("Ivan3") should throw the exception

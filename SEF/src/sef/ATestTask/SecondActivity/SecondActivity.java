@@ -1,19 +1,54 @@
 package sef.ATestTask.SecondActivity;
-// Complete Code
+
+
+
 public class SecondActivity {
 
-	public static void main(String[] args) {
-		SecondActivity calculator = new SecondActivity();
-
-
-		//TODO Use the calculator to calculate different values
-		//Example ->
-		//calculator.sum(10.2, 5);
-		//calculator.divide(100, 33);
-		// and more
-
+	public SecondActivity(double a, String o, double b) {
+		if (o.equals("+")) {
+			System.out.println(a + " + " + b + " = " + add(a,b));
+			return;
+		}
+		if (o.equals("-")) {
+			System.out.println(a + " + " + b + " = " + sub(a,b));
+			return;
+		}
+		if (o.equals("*")) {
+			System.out.println(a + " + " + b + " = " + mul(a,b));
+			return;
+		}
+		if (o.equals("/")) {
+			System.out.println(a + " + " + b + " = " + div(a,b));
+			return;
+		}
+		System.out.println("Unknown operation");
 	}
 
-	//TODO create the Calculator (here or in additional class)
+	public double add(double a, double b) {
+		return a + b;
+	}
 
+	public double sub(double a, double b) {
+		return a - b;
+	}
+
+	public double mul(double a, double b) {
+		return a * b;
+	}
+
+	public double div(double a, double b) {
+		return a / b;
+	}
+
+
+	public static void main(String[] args) {
+		if (args.length >= 3) {
+			new SecondActivity(Double.valueOf(args[0]), args[1],
+					Double.valueOf(args[2]));
+		} else {
+			System.out.println("Enter parameters like this: 1 + 1");
+			return;
+		}
+	}
 }
+
