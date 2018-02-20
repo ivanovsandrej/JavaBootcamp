@@ -15,5 +15,12 @@ public class SecondActivity {
 	}
 
 	//TODO create the Calculator (here or in additional class)
+	private double sum;
+	private double diff;
+	private double multi;
+	private double divide;
 
+	SecondActivity(){
+
+	}
 }
