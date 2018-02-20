@@ -12,14 +12,17 @@ public class ThirdActivity {
         ta.catchExeption();
     }
 
-    void catchExeption() {
+    void catchExeption()
+    {try
+    {
         int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         for (int i = 0; i <= 10; i++) {
             System.out.println(arr[i]);
-        }
+        } } catch (ArrayIndexOutOfBoundsException AoB) {AoB.getMessage();}
+        finally {
         System.out.println("This should get printed even if there is an exception");
-
+    }
     }
 
     void validateUser(String name) {
@@ -27,17 +30,34 @@ public class ThirdActivity {
         int flag = 0;
         //TODO if name in a list -> set flag=1
         // if at the end flag=0 -> throw the exeption
+
+        try {
+            for (int i = 0; i < validUsers.length; i++) {
+                if (name.equals(validUsers[i])) {
+                    flag = 1;
+                }
+            }
+            if (flag == 0)
+                throw new NullPointerException();
+        }catch(NullPointerException e){
+            System.out.println("" + "\n User validation failed" + e.getMessage());
+
+        }
+
     }
+
 
     void catchMe(int num1, int num2)
     {
         //TODO Catch exeption
-            int result=num1/num2;
-            System.out.println("The result is :" + result);
-
-            //TODO prints a message "Thank you for using this program." always
-            System.out.println("Thank you for using this program.");
-
+           try {
+               int result = num1 / num2;
+               System.out.println("The result is :" + result);
+           }catch (Exception ex) {ex.getMessage();}
+           finally{
+        //TODO prints a message "Thank you for using this program." always
+        System.out.println("Thank you for using this program.");
+    }
     }
 }
 
