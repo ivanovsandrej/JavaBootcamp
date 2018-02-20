@@ -4,7 +4,9 @@ package sef.ATestTask.FirstActivity;
 public class Person {
 
 //TODO 1 Implement Person Attributes
-
+private String firstName;
+private String secondName;
+private int age;
 	//Behavior - default constructor
 	public Person(){
 		this.firstName="Unknown";
@@ -26,6 +28,10 @@ public class Person {
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
+		boolean ok=true;
+		if (firstName.matches(".*\\d+.*")) {
+			ok = false; throw new NullPointerException();
+		}
 	}
 
 	// getter for int age

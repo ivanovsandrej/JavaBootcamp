@@ -8,13 +8,52 @@ public class Employee extends Person {
     private double salary;
 
     //TODO 1 create different constructors
-    public Employee(){
+    public Employee() {
+        this.empId = empId;
+        this.jobTitle = jobTitle;
+        this.companyName = companyName;
+        this.salary = salary;
 
     }
-
-    //TODO 2 add getters and setters
-
-
-
-
+public Employee(int empId, String JobTitle, String companyName, double salary) {
+    this.empId = empId;
+    this.jobTitle = JobTitle;
+    this.companyName = companyName;
+    this.salary = salary;
 }
+    //TODO 2 add getters and setters
+    public void SetempId(int id) {
+        this.empId = id;
+    }
+
+    public int getEmpId() {
+        return empId;
+    }
+
+    public void setJobTitle(String title) {
+        this.jobTitle = title;
+    }
+
+    public String getjobTitle() {
+        return jobTitle;
+    }
+
+    public void setcompanyName(String name) {
+        this.companyName = name;
+    }
+
+    public String getcompanyName() {
+        return companyName;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void changeParam(String newCompany) {this.companyName = newCompany;}
+
+    }
