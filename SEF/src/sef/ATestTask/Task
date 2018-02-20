@@ -21,9 +21,10 @@ Tasks
 4) in file FirstActivity
   4.1 create few employees
   4.2 try to print them from top salary to less
-  4.3 create person who became a student, and after that became a employee (must be one instance)
-
-5) Create unit test for ALL classes (example in EmployeeTest)
+  4.3 create person who became a student,
+   and after that became a employee
+    (must be one instance)
+5)Create unit test for ALL classes (example in EmployeeTest)
 
 6) Create good calculator in SecondActivity
 7) Add tests for calculator
@@ -33,9 +34,7 @@ setName("Ivan3") should throw the exception
 
 9) In third activity
  9.1 create try-catch blocks
- 9.2 handel the exceptions
-
-
+ 9.2 handel the except
 
 ###### BONUS ######
 
