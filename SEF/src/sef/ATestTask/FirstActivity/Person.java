@@ -1,9 +1,13 @@
 package sef.ATestTask.FirstActivity;
 
 
-public class Person {
+public class Person  {
 
 //TODO 1 Implement Person Attributes
+
+	private String firstName;
+	private String secondName;
+	int age;
 
 	//Behavior - default constructor
 	public Person(){
@@ -42,8 +46,14 @@ public class Person {
 		return secondName;
 	}
 
+
 	public void setSecondName(String secondName) {
 		this.secondName = secondName;
+	}
+
+	{
+		System.out.println("My name is " + getFirstName() +  " and i am " + getAge() +  " years old");
+
 	}
 }
 

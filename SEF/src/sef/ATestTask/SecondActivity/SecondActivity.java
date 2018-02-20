@@ -14,6 +14,42 @@ public class SecondActivity {
 
 	}
 
-	//TODO create the Calculator (here or in additional class)
 
+	//TODO create the Calculator (here or in additional class)
+	// Add
+	public int add(int x, int y) {
+		int sum = x + y;
+		return sum;
+	}
+
+	// Subtract
+	public int subtract(int x, int y) {
+
+
+		return x-y;
+	}
+
+	// Multiply
+	public int multiply(int[] numbers) {
+		int temp = 1;
+
+		for (int i = 0; i < numbers.length; i++) {
+			temp = temp * numbers[i];
+		}
+		return temp;
+
+	}
+
+	// Divide
+	public int divide(int x, int y) {
+		int divValue = 0;
+		if (x == 0 || y == 0) {
+			divValue = 0;
+		} else {
+			divValue = x / y;
+		}
+		return divValue;
+
+	}
 }
+
