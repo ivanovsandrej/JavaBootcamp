@@ -9,7 +9,7 @@ public class Person {
 	private int age;
 
 	//Behavior - default constructor
-	public Person(){
+	public Person(int i, String worker, String factory, double v){
 		this.firstName="Unknown";
 		this.secondName = "Unknown";
 		this.age = 0;

@@ -9,22 +9,22 @@ public class Employee extends Person {
 
     //TODO 1 create different constructors
     public Employee(){
-        super();
+        super(1, "worker", "factory", 80.00);
         this.empId = 0;
         this.jobTitle = "Unknown";
         this.companyName = "Unknown";
         this.salary = 0.00;
     }
-/*
+
     //Behavior - parameterized constructor
     public Employee(int empId, String jobTitle, String companyName, double salary){
-        super();
+        super(1, "worker", "factory", 80.00);
         this.empId = empId;
         this.jobTitle = jobTitle;
         this.companyName = companyName;
         this.salary = salary;
     }
-*/
+
     //Behavior - parameterized constructors
     public Employee(String firstName, String secondName, int age, int empId, String jobTitle, String companyName, double salary){
 
@@ -102,9 +102,11 @@ public class Employee extends Person {
        //String firstName, String secondName, int age, int empId, String jobTitle, String companyName, double salary
         System.out.println(" ****** Employee info: \n");
         System.out.println(" First name: " + this.getFirstName());
-        System.out.println(" Second name: " + this.getFirstName());
+        System.out.println(" Second name: " + this.getSecondName());
         System.out.println(" Age: " + this.getAge());
+        System.out.println();
         System.out.println(" Identifier: " + this.empId);
+        System.out.println(" Job title: " + this.jobTitle);
         System.out.println(" Company name: " + this.companyName);
         System.out.println(" Salary: "+ this.salary);
         System.out.println();

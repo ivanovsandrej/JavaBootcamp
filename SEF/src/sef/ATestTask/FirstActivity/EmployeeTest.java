@@ -18,12 +18,12 @@ public class EmployeeTest {
     public void checkEmployeeCreatedDefault() {
         Employee employee = new Employee();
         double salary = 0.00;
-        assertEquals("Unknown", employee.getFirstName());
-        assertEquals("Unknown", employee.getSecondName());
-        assertEquals(0, employee.getAge());
-        assertEquals("Unknown", employee.getJobTitle());
-        assertEquals("Unknown", employee.getCompanyName());
-        assertEquals(salary, employee.getSalary(),2);
+        assertEquals("Error in the FirstName field","Unknown", employee.getFirstName());
+        assertEquals("Error in the SecondName field","Unknown", employee.getSecondName());
+        assertEquals("Error in the Age field",0, employee.getAge());
+        assertEquals("Error in the JobTitle field","Unknown", employee.getJobTitle());
+        assertEquals("Error in the CompanyName field","Unknown", employee.getCompanyName());
+        assertEquals("Error in the Salary field",salary, employee.getSalary(),2);
     }
 
     @Test
@@ -38,6 +38,16 @@ public class EmployeeTest {
     }
     @Test
     public void checkEmployeeCreatedParameterized1(){
+        Employee employee = new Employee(1,"worker","factory",80.00);
+        assertEquals("Unknown", employee.getFirstName());
+        assertEquals("Unknown", employee.getSecondName());
+        assertEquals(0, employee.getAge());
+        assertEquals(1,employee.getEmpId());
+        assertEquals("worker",employee.getJobTitle());
+        assertEquals("factory",employee.getCompanyName());
+    }
+    @Test
+    public void checkEmployeeCreatedParameterized2(){
         Employee employee = new Employee(new Person("Vasja","Pupkin",16),1,"worker","factory",80.00);
         assertEquals("Vasja", employee.getFirstName());
         assertEquals("Pupkin", employee.getSecondName());
@@ -90,12 +100,12 @@ public class EmployeeTest {
     public void checkEmployeeGetCompanyName(){
         Employee employee = new Employee(new Person("Vasja","Pupkin",16),1,"worker","factory",80.00);
 
-        assertEquals("factory",  employee.getJobTitle());
+        assertEquals("factory",  employee.getCompanyName());
     }
     @Test
     public void checkEmployeeCompanyName() {
         Employee employee = new Employee(new Person("Vasja", "Pupkin", 16), 1, "worker", "factory", 80.00);
-        employee.setJobTitle("new factory");
+        employee.setCompanyName("new factory");
 
         assertEquals("new factory",  employee.getCompanyName());
     }
@@ -107,5 +117,13 @@ public class EmployeeTest {
         assertEquals("My name is Unknown Unknown and i am 0 years old I am work as Unknown in Unknown",introduceLine);
     }
 
+    @Test
+    public void checkEmployeeChange(){
+        Employee employee = new Employee(new Person("Vasja","Pupkin",16),1,"worker","factory",80.00);
+        employee.changeEmployee("doctor","hospital",190.00);
 
-}
+        assertEquals("doctor",employee.getJobTitle());
+        assertEquals("hospital",employee.getCompanyName());
+        assertEquals(190.00,employee.getSalary(),2);
+    }
+    }

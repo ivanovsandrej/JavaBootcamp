@@ -8,7 +8,7 @@ public class Student  extends Person {
 
     //TODO 1 create different constructors
     public Student(){
-        super();
+        super(1, "worker", "factory", 80.00);
         this.studId = 0;
         this.schoolName = "Unknown";
     }
@@ -68,7 +68,7 @@ public class Student  extends Person {
         //String firstName, String secondName, int age, int empId, String jobTitle, String companyName, double salary
         System.out.println(" ****** Student info: \n");
         System.out.println(" First name: " + this.getFirstName());
-        System.out.println(" Second name: " + this.getFirstName());
+        System.out.println(" Second name: " + this.getSecondName());
         System.out.println(" Age: " + this.getAge());
         System.out.println(" Identifier: " + this.studId);
         System.out.println(" School name: " + this.schoolName);

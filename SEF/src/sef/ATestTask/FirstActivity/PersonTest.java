@@ -8,7 +8,7 @@ public class PersonTest {
 
     @Test
     public void checkPersonCreatedDefault(){
-        Person person = new Person();
+        Person person = new Person(1, "worker", "factory", 80.00);
         assertEquals("Unknown",person.getFirstName());
         assertEquals("Unknown",person.getSecondName());
         assertEquals(0,person.getAge());
@@ -73,7 +73,7 @@ public class PersonTest {
 
     @Test
     public void checkPersonIntroduce(){
-        Person person = new Person();
+        Person person = new Person(1, "worker", "factory", 80.00);
         String introduceLine = person.introduce().trim();
         assertEquals("My name is Unknown Unknown and i am 0 years old",introduceLine);
     }
