@@ -1,3 +1,4 @@
+/*
 package sef.ATestTask.FirstActivity;
 
 import org.junit.Test;
@@ -15,3 +16,4 @@ public class EmployeeTest {
     }
 
 }
+*/
