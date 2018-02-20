@@ -55,9 +55,13 @@ public class Person {
 		this.secondName = secondName;
 	}
 
-	public void introduce(){
-		System.out.println("My name is " + firstName +" "+ secondName + " and my age is " + age + "years old");}
+	public String introduce(){
+		return "My name is " + firstName +" "+ secondName + " and my age is " + age + " years old";}
 
+	public static void main(String[] args) {
+		Person introduce = new Person();
+		System.out.println(introduce.introduce());
+	}
 }
 
 

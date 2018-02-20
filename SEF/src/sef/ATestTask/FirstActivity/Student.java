@@ -8,6 +8,10 @@ public class Student extends Person {
     private int grade;
     private String school;
 
+    public Student (){
+
+    }
+
     public Student(int grade, String school) {
         this.grade = grade;
         this.school= school;
@@ -28,9 +32,12 @@ public class Student extends Person {
     }
 
 
-    public void introduce(){
-        System.out.println("I am study in university " + school);}
+    public String introduce(){
+        return ("I am study in university " + school); }
 
-
+    public static void main(String[] args) {
+        Student introduce = new Student();
+        System.out.println(introduce.introduce());
+    }
 
 }

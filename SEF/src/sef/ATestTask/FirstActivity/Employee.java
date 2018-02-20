@@ -92,8 +92,13 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
-    public void introduce(){
+    public String introduce(){
         super.introduce();
-        System.out.println("I am work as" + jobTitle + " in " + companyName);
+        return ("I am work as " + jobTitle + " in " + companyName);
+    }
+
+    public static void main(String[] args) {
+        Employee introduce = new Employee();
+        System.out.println(introduce.introduce());
     }
 }
