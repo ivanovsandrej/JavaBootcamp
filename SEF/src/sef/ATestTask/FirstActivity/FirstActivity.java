@@ -87,9 +87,9 @@ public class FirstActivity {
 				}
 			}
 		}
+		System.out.println("****List of employees in ascending order" +
+                " of their salaries earned****");
 		for (int k =0; k < employeeList.size()-1; k++) {
-			System.out.println("****List of employees in ascending order" +
-					" of their salaries earned****");
 			System.out.println(employeeList.get(k).getFirstName());
 		}
 		//TODO 3 create instance of the Person ->
