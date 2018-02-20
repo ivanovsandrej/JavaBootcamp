@@ -1,41 +1,45 @@
-package sef.ATestTask.FirstActivity;
+package ATestTask.FirstActivity;
 
 
 public class Person {
 
 //TODO 1 Implement Person Attributes
+private String firstName;
+private String secondName;
+	private String age;
 
 	//Behavior - default constructor
 	public Person(){
 		this.firstName="Unknown";
-		this.secondName = "Unknown";
-		this.age = 0;
+		this.secondName = "Unknownn";
+		this.age = age;
+
 	}
 
 	//Behavior - parameterized constructor
-	public Person(String firstName, String secondName, int age){
+	public Person(String firstName, String secondName, String age){
 		this.firstName = firstName;
 		this.secondName = secondName;
 		this.age = age;
 	}
 
 	// getter for String firstName
-	public String getFirstName() {
+	public String getName() {
 		return firstName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setName(String firstName) {
+		this.firstName = "I am" +firstName;
 	}
 
 	// getter for int age
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
 
 	// setter for int age
-	public void setAge(int age) {
-		this.age = age;
+	public void setAge(String age) {
+		this.age = age +"years old";
 	}
 
 	public String getSecondName() {

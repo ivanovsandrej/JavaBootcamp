@@ -1,4 +1,4 @@
-package sef.ATestTask.FirstActivity;
+package ATestTask.FirstActivity;
 
 import org.junit.Test;
 
