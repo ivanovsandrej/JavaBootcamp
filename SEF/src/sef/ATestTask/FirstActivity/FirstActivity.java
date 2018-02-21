@@ -1,5 +1,7 @@
 package sef.ATestTask.FirstActivity;
 
+import java.util.ArrayList;
+
 public class FirstActivity {
 
 	public static void main(String[] args) {
@@ -13,6 +15,16 @@ public class FirstActivity {
 
 
 		//		System.out.println() result
+		System.out.println(a.getFirstName() + " " + a.getSecondName() + " " + a.getAge() + " " + a.getEmpId()
+				+ " " +a.getJobTitle() + " " + a.getCompanyName() + " " + a.getSalary());
+		System.out.println(b.getFirstName() + " " + b.getSecondName() + " " + b.getAge() + " " + b.getEmpId()
+				+ " " +b.getJobTitle() + " " + b.getCompanyName() + " " + b.getSalary());
+		System.out.println(c.getFirstName() + " " + c.getSecondName() + " " + c.getAge() + " " + c.getEmpId()
+				+ " " +c.getJobTitle() + " " + c.getCompanyName() + " " + c.getSalary());
+		System.out.println(d.getFirstName() + " " + d.getSecondName() + " " + d.getAge() + " " + d.getEmpId()
+				+ " " +d.getJobTitle() + " " + d.getCompanyName() + " " + d.getSalary());
+		System.out.println(e.getFirstName() + " " + e.getSecondName() + " " + e.getAge() + " " + e.getEmpId()
+				+ " " +e.getJobTitle() + " " + e.getCompanyName() + " " + e.getSalary());
 
 
 		System.out.println("-----------------------------");
@@ -24,23 +36,13 @@ public class FirstActivity {
 		System.out.println("Employee's CompanyName is 	: " + a.getCompanyName());
 		System.out.println("Employee's Salary is 		: " + a.getSalary());
 
-
-
-		System.out.println("-----------------------------");
-		System.out.println("Employee's Name is 		    : " + b.getFirstName());
-		System.out.println("Employee's Second Name is  	: " + b.getSecondName());
-		System.out.println("Employee's Age is 			: " + b.getAge());
-		System.out.println("Employee's EmpId is 		: " + b.getEmpId());
-		System.out.println("Employee's JobTitle is 		: " + b.getJobTitle());
-		System.out.println("Employee's CompanyName is 	: " + b.getCompanyName());
-		System.out.println("Employee's Salary is 		: " + b.getSalary());
-
-
-
-
-
 		//TODO 2 sort and this employees by salary (from min to max)
 		// TIP - google bubble sort
+
+		ArrayList list = new ArrayList();
+
+		System.out.println(list);
+
 		//		System.out.println() result
 
 

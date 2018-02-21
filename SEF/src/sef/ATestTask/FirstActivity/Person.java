@@ -15,19 +15,19 @@ public class Person {
 
 	//Behavior - default constructor
 	public Person() {
-			this.firstName = "First Name";
-			this.secondName = "Second Name";
-			this.age = 0;
-		}
+		this.firstName = "First Name";
+		this.secondName = "Second Name";
+		this.age = 0;
+	}
 
-		//Behavior - parameterized constructor
-	public Person(String firstName, String secondName, int age){
-			this.firstName = firstName;
-			this.secondName = secondName;
-			this.age = age;
-		}
+	//Behavior - parameterized constructor
+	public Person(String firstName, String secondName, int age) {
+		this.firstName = firstName;
+		this.secondName = secondName;
+		this.age = age;
+	}
 
-		// getter for String firstName
+	// getter for String firstName
 
 	public String getFirstName() {
 		return firstName;
@@ -55,14 +55,12 @@ public class Person {
 		this.secondName = secondName;
 	}
 
-	public String introduce(){
-		return "My name is " + firstName +" "+ secondName + " and my age is " + age + " years old";}
-
-	public static void main(String[] args) {
-		Person introduce = new Person();
-		System.out.println(introduce.introduce());
+	public void introduce() {
+		System.out.println("My name is " + firstName + " " + secondName + " and my age is " + age + " years old");
 	}
+
 }
+
 
 
 

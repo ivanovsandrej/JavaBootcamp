@@ -2,9 +2,6 @@ package sef.ATestTask.FirstActivity;
 
 public class Employee extends Person {
 
-    private String firstName;
-    private String secondName;
-    private int age;
     private int empId;
     private String jobTitle;
     private String companyName;
@@ -12,14 +9,17 @@ public class Employee extends Person {
 
     //TODO 1 create different constructors
     public Employee(){
-
+        this.empId = 777;
+        this.jobTitle = "Unknown Title";
+        this.companyName = "Unknown Company";
+        this.salary = 155.55;
     }
 
     public Employee(String firstName, String secondName, int age, int empId, String jobTitle, String companyName, double salary){
 
-        this.firstName = firstName;
-        this.secondName= secondName;
-        this.age = age;
+        setFirstName(firstName);
+        setSecondName(secondName);
+        setAge(age);
         this.empId = empId;
         this.jobTitle = jobTitle;
         this.companyName = companyName;
@@ -34,31 +34,6 @@ public class Employee extends Person {
         this.salary= newsalary;
     }
     //TODO 2 add getters and setters
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    // getter for int age
-    public int getAge() {
-        return age;
-    }
-
-    // setter for int age
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getSecondName() {
-        return secondName;
-    }
-
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
-    }
 
     public int getEmpId() {
         return empId;
@@ -92,13 +67,7 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
-    public String introduce(){
+    public void introduce(){
         super.introduce();
-        return ("I am work as " + jobTitle + " in " + companyName);
-    }
-
-    public static void main(String[] args) {
-        Employee introduce = new Employee();
-        System.out.println(introduce.introduce());
-    }
+        System.out.println("I am work as " + jobTitle + " in " + companyName);}
 }
