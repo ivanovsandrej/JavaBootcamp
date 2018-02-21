@@ -20,7 +20,7 @@ public class ThirdActivity {
                 System.out.println(arr[i]);
 
             }
-        } catch (ArrayIndexOutOfBoundsException) {
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("This should get printed even if there is an exception");
         } finally {
             System.out.println("Thank you for using this service");
@@ -44,15 +44,21 @@ public class ThirdActivity {
     }
 
 
-    void catchMe(int num1, int num2)
-    {
+    void catchMe(int num1, int num2) {
         //TODO Catch exeption
-            int result=num1/num2;
+        num1 = 10;
+        num2 = 0;
+        try {
+            int result = num1 / num2;
             System.out.println("The result is :" + result);
+        } catch (NullPointerException e) {
+            System.out.println("You cannot divide by zero");
 
             //TODO prints a message "Thank you for using this program." always
+        } finally {
             System.out.println("Thank you for using this program.");
-
+        }
     }
 }
+
 

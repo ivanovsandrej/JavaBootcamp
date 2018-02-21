@@ -19,6 +19,7 @@ private int age;
 		this.firstName = firstName;
 		this.secondName = secondName;
 		this.age = age;
+		System.out.println("My name is"+firstName+"and i am" + age);
 	}
 
 	// getter for String firstName

@@ -28,7 +28,7 @@ public class EmployeeTest {
     public void TestCompanyName() {
         Employee employee = new Employee();
         employee.setcompanyName("Accenture");
-        assertEquals("Accenture",employee.getjobTitle());
+        assertEquals("Accenture",employee.getcompanyName());
     }
 
 
@@ -47,4 +47,42 @@ public void TestSalary () {
     employee.setSalary(12000);
     assertEquals(12000,employee.getSalary(), 2);
 }
+
+
+    public void checkPersonCreatedProperly() {
+        Person per = new Person("Jade", "Barker", 23);
+        assertEquals("Jade", per.getFirstName());
+        assertEquals("Barker", per.getSecondName());
+        assertEquals(23, per.getAge());
+    }
+    public void TestFirstNamePerson(){
+        Person person = new Person();
+        person.setFirstName("Jade");
+        assertEquals("Jade", person.getFirstName());
+    }
+    public void TestSecondNamePerson(){
+        Person person=new Person();
+        person.setSecondName("Barker");
+        assertEquals("Barker", person.getSecondName());
+    }
+    public void TestPersonage() {
+        Person person=new Person();
+        person.setAge(24);
+        assertEquals(24,person.getAge());
+    }
+    public void TestSchoolName();{
+        Student student=new Student();
+        student.setSchoolName("Secondary");
+        assertEquals("Secondary",student.getSchoolName());
+    }
+    public void TestSchoolNumber(); {
+        Student student=new Student();
+        student.setSchoolNumber(34);
+        assertEquals(34,student.getSchoolNumber);
+    }
+    public void testCreateStudent();{
+        Student student=new Student("Secondary",54);
+        assertEquals("Secondary", student.getSchoolName());
+        assertEquals(54,student.getSchoolNumber());
+    }
 }

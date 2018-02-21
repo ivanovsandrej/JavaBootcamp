@@ -20,6 +20,9 @@ public Employee(int empId, String JobTitle, String companyName, double salary) {
     this.jobTitle = JobTitle;
     this.companyName = companyName;
     this.salary = salary;
+    String firstName = getFirstName();
+    int age = getAge();
+    System.out.println("My name is"+firstName+"and i am" + age + "I'm work as"+JobTitle +"in" + companyName);
 }
     //TODO 2 add getters and setters
     public void SetempId(int id) {
