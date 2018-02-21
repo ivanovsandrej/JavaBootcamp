@@ -18,7 +18,7 @@ public class DeleteSample {
 			System.out.println("Connection successfully established!");
 			
 			//1 - Create a PreparedStatement with a query "delete from employee where id = ?" 
-			PreparedStatement pStmt = ;
+			PreparedStatement pStmt = null;
 			
 			//	Change parameter to any keyword desired, if a record
 			// 	matches the query then it will be displayed
@@ -26,7 +26,7 @@ public class DeleteSample {
 			
 			
 			//2 - Execute this query using executeUpdate()
-			int rows = ;
+			int rows;
 			cn.commit();	
 			System.out.println(rows + " row(s)deleted!");
 			

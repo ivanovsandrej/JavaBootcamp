@@ -90,7 +90,9 @@ public class MyCalculatorTest extends TestCase {
 		//	Checks if b is greater than a
 		assertEquals(0.5, (theCalculator.getQuotient(b,a)),0);
 
-		a = 9;	b = -3;
+		a=5; b = 0;
+		assertEquals(0, theCalculator.getQuotient(a,b));
+
 		//	Checks if positive value is divided with negative value
 		assertEquals(-3, (theCalculator.getQuotient(a,b)),0);		
 		//	Checks if negative value is divided with positive value

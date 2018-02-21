@@ -11,7 +11,7 @@ public class EmployeeJDBC {
 
 	public Connection createConnection()
 	{
-		Connection con=null;
+		Connection con = null;
 		String url = "jdbc:mysql://localhost/activity";
 		String user = "root";
 		String pass = "adbd1234";
@@ -37,12 +37,14 @@ public class EmployeeJDBC {
 		Employee emp=null;
 		try {
 		// 1 - Create a PreparedStatement with a query
-		
+			PreparedStatement pStmt = con.prepareStatement("select * from employee" +
+																		"where id=?");
 
 		// 2 - Search for the given id
-		
+		pStmt.setString((1,id););
 
 		// 3 - Execute this query
+			ResultSet rs =
 		
 		
 		// 4 - If resultset is not null, then initialize emp object with data 

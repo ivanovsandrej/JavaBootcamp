@@ -16,7 +16,7 @@ public class PreparedStatementSample {
 			System.out.println("Connection successfully established!");
 			
 			//1 - Create a PreparedStatement with a query "select * from employee where firstname = ?" 
-			PreparedStatement pStmt = ;
+			PreparedStatement pStmt = null;
 			
 			//	Change parameter to any keyword desired, if a record
 			// 	matches the query then it will be displayed

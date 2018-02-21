@@ -6,11 +6,13 @@ public class Person {
 
 	//Attributes
 	private String name;
+	private String male;
 	
 	
 	//Behavior
 	public Person(String name){
 		this.name = name;
+		this.male = "men";
 	}
 	
 	public String getName() {

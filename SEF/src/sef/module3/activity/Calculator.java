@@ -20,7 +20,6 @@ public class Calculator {
 	System.out.println("Subtraction - " + subtract(x,y));
 	System.out.println("Multiply - " + multiply(nums));
 	System.out.println("Divide - " + divide(x,y));
-	
 	}
 
 
@@ -32,11 +31,8 @@ public class Calculator {
 	private static int subtract(int x, int y) {
 		int diff = 0;
 		if (x > y) {
-			// complete the code
-		} else {
-			// complete the code
+		diff = x - y;
 		}
-
 		return diff;
 	}
 
@@ -52,10 +48,11 @@ public class Calculator {
 
 	private static int divide(int x, int y) {
 		int divValue = 0;
-		if (x == 0 || y == 0) {
-			// complete the code
+		if ( y == 0 ) {
+			System.out.println("Dividing to 0 is not allowed!");
+			divValue = 0;
 		} else {
-			// complete the code
+			divValue = x / y;
 		}
 		return divValue;
 

@@ -69,6 +69,17 @@ public class Calculator {
 			divValue = x / y;
 		}
 		return divValue;
+	}
+
+		// Divide
+	public float divide(float x, float y) {
+		float divValue = 0;
+		if (x == 0 || y == 0) {
+			divValue = 0;
+		} else {
+			divValue = x / y;
+		}
+		return divValue;
 
 	}
 }

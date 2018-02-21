@@ -17,20 +17,20 @@ public class ClientActivity {
 
 			
 			//Obtaining InputStream to be able to read messages sent by Server
-			BufferedReader in = ;
+			BufferedReader in = null;
 			
 			//2 - Obtain Keyboard's InputStream to read data from keyboard 
-			BufferedReader myIn = ;
+			BufferedReader myIn ;
 			
 			//3 - Obtain Socket's OutputStream to write/send messages on it.
-			PrintWriter out = ;
+			PrintWriter out = null;
 			
 			//Reading the message sent by server
 			String serverMsg = in.readLine();
 			while (serverMsg != null){
 				System.out.println("Server said : " +serverMsg);
 				//4 - Read from keyboard using myIn.readLine()
-				String myMsg = ;
+				String myMsg = null;
 				
 				//Sending this message to the Server
 				out.println(myMsg);

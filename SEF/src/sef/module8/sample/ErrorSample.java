@@ -4,7 +4,13 @@ public class ErrorSample {
 	
 	//This is an example of an error which cannot be handled programmatically 
 	public static void main(String arg[]){
-		infinity();
+		try {
+			infinity();
+		}
+		catch (Error e)
+		{
+			System.out.println("So bad idea!");
+		}
 	}
 	
 	//Below method calls itself and
@@ -12,9 +18,8 @@ public class ErrorSample {
 	//At one point in time, JVM would give up and show StackOverflowError
 	public static void infinity(){
 		//1 - Print a message
-	
-		
+		System.out.println("Infifity");
 		//2 - Call infinity()
-	
+		infinity();
 	}
 }
