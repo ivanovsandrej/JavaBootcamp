@@ -90,7 +90,7 @@ public class Employee extends Person {
 
     public String introduce()
     {
-        String outLine = super.introduce() + " I am work as "; // "My name is <name> and i am <age> years old I am work as
+        String outLine = super.introduce() + ". I am work as "; // "My name is <name> and i am <age> years old I am work as
 
         outLine = outLine + this.jobTitle + " in " + this.companyName ; //<jobTitle> in <company>
 

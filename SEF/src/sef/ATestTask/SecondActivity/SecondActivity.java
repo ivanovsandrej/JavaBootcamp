@@ -1,15 +1,16 @@
 package sef.ATestTask.SecondActivity;
 // Complete Code
-public class SecondActivity {
+public class SecondActivity extends Calculator {
 
 	public static void main(String[] args) {
+
 		SecondActivity calculator = new SecondActivity();
 
 
 		//TODO Use the calculator to calculate different values
 		//Example ->
-		//calculator.sum(10.2, 5);
-		//calculator.divide(100, 33);
+		calculator.getSum(10.2, 5);
+		calculator.getDivide(100, 33);
 		// and more
 
 	}

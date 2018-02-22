@@ -1,17 +1,27 @@
-package sef.ATestTask.FirstActivity;
+package ATestTask.FirstActivity;
 
 
-import java.util.HashMap;
-import java.util.Random;
+import java.util.*;
+import java.util.function.ToDoubleFunction;
+import java.util.function.ToLongFunction;
+
+import static ATestTask.FirstActivity.Helper.printing;
+
 
 public class FirstActivity {
 
-	public static void main() {
+    public static void main() {
 
         Random r = new Random();
 
-        HashMap employeeMap,employeeMapSorted;
+        HashMap employeeMap;
+        // I uses HashMap here to show that I can use it only.
+        // ArrayList<Employee> is enough really.
+
         employeeMap = new HashMap();
+        ArrayList<Employee> emplArr1, emplArr;
+        emplArr = new ArrayList<Employee>();
+        emplArr1 = new ArrayList<Employee>();
 
         //TODO 1 Create collection of employee (more than 5)
 
@@ -30,30 +40,42 @@ public class FirstActivity {
             rand = 1000.00 * r.nextDouble();
             curEmployee.setSalary(rand);
 
-
             employeeMap.put(i, curEmployee);
+            emplArr.add(curEmployee);
+            emplArr1.add(curEmployee);
 
         }
         //		System.out.println() result
-        System.out.println("--------------- the first print ----------------------------------------");
+        System.out.println("--------------- the original order ----------------------------------------");
         printing(employeeMap);
 
-        //TODO 2 sort and this employees by salary (from min to max)
+        //TODO 2 sort and this employees by salary (top salary to less)
         // TIP - google bubble sort
-        employeeMapSorted = sorting(employeeMap);
+        Helper h = new Helper();
 
-        //		System.out.println() result
-        System.out.println("--------------- the second print ----------------------------------------");
-        printing(employeeMapSorted);
+        emplArr.sort(h.EmpSalary);
 
+        h.bubbleSort(emplArr1);
+
+        System.out.println("--------------- ordered by salary with comparator( top salary to less ) ----");
+        printing(emplArr);
+
+        System.out.println("--------------- ordered by salary bubble sorting ( top salary to less ) ----");
+        printing(emplArr1);
+
+        System.out.println("--------------- person is changing his type ---------------------------------");
         //TODO 3 create instance of the Person ->
-        Person person = new Person("Vasilij","Terkin",30);
+        Person person = new Person("Vasilij", "Terkin", 30);
 
+        // Next 2 constructors were checked in the corresponding classes
         // than make them Student
-        Student student = new Student(person,1,"RTU");
+        Student student = new Student(person, 1, "RTU");
 
         // than make them Employee
-        Employee employee = new Employee(person,1,"programmer", "Accenture", 200.00);
+        Employee employee = new Employee(person, 1, "programmer", "Accenture", 200.00);
+
+        //If the task means changeing from Student to Employee, then:
+        Employee employee1 = new Employee((Person) student, 1, "programmer", "Accenture", 200.00);
 
         //		System.out.println() result
         person.introduce();
@@ -61,55 +83,27 @@ public class FirstActivity {
         employee.introduce();
 
         // Second variant:
-        student.printStudent();
-        employee.printEmployee();
+        //student.printStudent();
+        //employee.printEmployee();
 
         //TODO 4 Create method for total change employee information
         // for example some employee change his work
-         employee.changeEmployee("Writer", "Redaction", 250.12);
+        employee.changeEmployee("Writer", "Redaction", 250.12);
     }
 
-    //sort and this employees by salary (from min to max)
-    // TIP - google bubble sort
-    private static HashMap sorting( HashMap employeeMap) {
-        //HashMap employeeMapExit = new HashMap();
-        double salaryPred, salaryCurrent;
-        for (int i = 1; i < 10; i++) {
-            Employee temp = null;
-            Employee pred = null;
-            Employee curr = null;
+/*    *//*Comparator for sorting the list by Salary*//*
+    public static Comparator EmpSalary = new Comparator<Employee>() {
 
-            if (i > 1)
-            {
-                pred = (Employee)employeeMap.get((i - 1));
-                curr = (Employee)employeeMap.get(i);
-
-                if ( pred.getSalary() > curr.getSalary()) {
-                    temp = pred;
-                    employeeMap.put((i - 1), curr);
-                    employeeMap.put(i, temp);
-
-                }
-            }
+        public int compare(Employee e1, Employee e2) {
+            double salary1 = e1.getSalary();
+            double salary2 = e2.getSalary();
+            double diff = salary2 - salary1;
+            if ((diff > 0) & (diff < 1)) return 1;
+            if ((diff < 0) & (diff > -1))return -1;
+            return (int)diff;
         }
-        return employeeMap;
-    }
-
-    //		System.out.println() result
-    private static void printing( HashMap employeeMap) {
-        for (int i = 1; i < 10; i++) {
-            Employee temp = (Employee) employeeMap.get(i);
-            String begin = "Person " + i;
-            System.out.println(begin + " first name " + temp.getFirstName());
-            System.out.println(begin + " second name " + temp.getSecondName());
-            System.out.println(begin + " salary " + " " + String.format("%.2f", temp.getSalary()));
-
-        }
-    }
-
-
+    };*/
 }
-
 
 
 	

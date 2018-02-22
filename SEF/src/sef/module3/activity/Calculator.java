@@ -57,6 +57,17 @@ public class Calculator {
 		return divValue;
 
 	}
-	
+
+	private static int mod(int x, int y) {
+		int divValue = 0;
+		if ( y == 0 ) {
+			System.out.println("Dividing to 0 is not allowed!");
+			divValue = 0;
+		} else {
+			divValue = x / y;
+		}
+		return divValue;
+
+	}
 }
 
