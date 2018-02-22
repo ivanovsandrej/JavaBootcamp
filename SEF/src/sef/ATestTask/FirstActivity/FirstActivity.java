@@ -39,11 +39,10 @@ public class FirstActivity {
 		//TODO 2 sort and this employees by salary (from min to max)
 		// TIP - google bubble sort
 
-		ArrayList list = new ArrayList();
 
-		System.out.println(list);
 
-		//		System.out.println() result
+
+				//		System.out.println() result
 
 
 
@@ -60,7 +59,7 @@ public class FirstActivity {
 		//TODO 4 Create method for total change employee information
 		// for example some employee change his work
 		d.workChange(142,"sda","gasfas",300.00);
-		System.out.print(d.getFirstName() + d.getCompanyName() + d.getSalary()+ d.getJobTitle());
+		System.out.print(d.getFirstName() +" "+  d.getCompanyName() +" " + d.getSalary()+ " "+ d.getJobTitle());
 
 	}
 
