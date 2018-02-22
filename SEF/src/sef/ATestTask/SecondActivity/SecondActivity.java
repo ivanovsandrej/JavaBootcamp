@@ -6,7 +6,7 @@ import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 public class SecondActivity {
 
     public static void main(String[] args) {
-        SecondActivity calculator = new SecondActivity();
+        SecondActivity calculator = new SecondActivity();}
 
 
         //TODO Use the calculator to calculate different values
@@ -38,7 +38,7 @@ public class SecondActivity {
     public double substract (double a, double b){
         return a-b;
     }
-}
+
 
 
 //TODO create the Calculator (here or in additional class)

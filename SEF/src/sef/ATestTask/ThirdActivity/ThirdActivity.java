@@ -34,7 +34,7 @@ public class ThirdActivity {
 
         int i;
         //TODO if name in a list -> set flag=1
-        for (i = 0, i < validUsers.length, i++) {
+        for (i = 0; i < validUsers.length; i++) {
             if (validUsers[i].equals(name)) {
                 flag = 1;
             }

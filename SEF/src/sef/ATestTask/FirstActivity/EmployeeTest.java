@@ -23,7 +23,7 @@ public class EmployeeTest {
     public void TestJobTitle() {
         Employee employee = new Employee();
         employee.setJobTitle("programmer");
-        assertEquals("programmer", employee.getjobTitle();}
+        assertEquals("programmer", employee.getjobTitle());}
 
     public void TestCompanyName() {
         Employee employee = new Employee();
@@ -43,7 +43,7 @@ public class EmployeeTest {
     }
 
 public void TestSalary () {
-    Employee employee = new Employee;
+    Employee employee = new Employee();
     employee.setSalary(12000);
     assertEquals(12000,employee.getSalary(), 2);
 }
@@ -70,17 +70,17 @@ public void TestSalary () {
         person.setAge(24);
         assertEquals(24,person.getAge());
     }
-    public void TestSchoolName();{
+    public void TestSchoolName(){
         Student student=new Student();
         student.setSchoolName("Secondary");
         assertEquals("Secondary",student.getSchoolName());
     }
-    public void TestSchoolNumber(); {
+    public void TestSchoolNumber() {
         Student student=new Student();
         student.setSchoolNumber(34);
-        assertEquals(34,student.getSchoolNumber);
+        assertEquals(34,student.getSchoolNumber());
     }
-    public void testCreateStudent();{
+    public void testCreateStudent() {
         Student student=new Student("Secondary",54);
         assertEquals("Secondary", student.getSchoolName());
         assertEquals(54,student.getSchoolNumber());

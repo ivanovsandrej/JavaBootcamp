@@ -11,7 +11,7 @@ public class SecondActivityTest extends TestCase {
 	protected void setUp() throws Exception {
 		super.setUp();
 		//	Initialize variables to be used here
-		theCalculator = new SecondActivity();
+		SecondActivity theCalculator = new SecondActivity();
 	}
 //after
 	protected void tearDown() throws Exception {
