@@ -6,20 +6,23 @@ public class Employee extends Person {
     private String jobTitle;
     private String companyName;
     private double salary;
+    private String changeWork;
 
     //TODO 1 create different constructors
 
-    public Employee(){
+    public Employee() {
 
     }
-    public Employee(int empId, String jobTitle, String companyName, double salary){
+
+    public Employee(int empId, String jobTitle, String companyName, double salary) {
         this.empId = empId;
         this.jobTitle = jobTitle;
         this.companyName = companyName;
         this.salary = salary;
+                }
+    public Employee(String changeWork) {
+        this.empId = empId;
     }
-
-
     //TODO 2 add getters and setters
 
     // getter and setter for int empId
@@ -58,14 +61,14 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
+    //
+    public String changeWork() {
+        return changeWork();
+    }
+
+    public void changeWork (String changeWork) { this.changeWork = changeWork; }
+
     public void introduceEmployee() {
         System.out.println("My name is " + getFirstName() + "" + getSecondName() + "and I am " + getAge() + " year old. I work as " + getJobTitle() + " in " + getCompanyName());
     }
-
-   /* public void Change(int empId, String jobTitle, String companyName, double salary){
-        this.empId = empId;
-        this.jobTitle = jobTitle;
-        this.companyName = companyName;
-        this.salary = salary;*/
-    //}
 }

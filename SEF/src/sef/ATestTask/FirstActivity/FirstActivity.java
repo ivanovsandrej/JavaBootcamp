@@ -1,5 +1,7 @@
 package sef.ATestTask.FirstActivity;
 
+import sef.ATestTask.FirstActivity.Employee;
+
 import java.lang.reflect.AnnotatedArrayType;
 import java.util.ArrayList;
 import java.util.List;
@@ -76,43 +78,40 @@ public class FirstActivity {
 		// TIP - google bubble sort
 		//		System.out.println() result
 
-		/*	for (int i = empL.size() - 1; i > 0; i--)
-				for (int j = 0; j < 1; j++)
-					if (empL.get(j).getSalary() > empL.get(j + 1).getSalary()) {
-						Employee sor = empL.get(j);
-						empL.set(j, empL.get(j + 1));
-						empL.set(j + 1, sor);
-					}
-			System.out.println("Sorted by salary:");
-			for (Employee ob : empL) {
-				ob.introduceEmployee();
-			}*/
-
-			//TODO 3 create instance of the Person ->
-			// than make them Student
-			// than make them Employee
-			//		System.out.println() result
-			Person Man1 = new Person("Anna ", "Ivanova ", 20 );
-			Person Man2 = new Person();
-			Person Man3 = new Person();
-			Person Man4 = new Person();
-			Person Man5 = new Person();
-
-			//System.out.println(Man.introduce());
-
-			Man1 = new Student("RTU");
-			Man1 = new Employee(1,"SIA BBC", "Manager", 1000 );
-
-			//TODO 4 Create method for total change employee information
-			// for example some employee change his work
-
-
-
-
+		for (int i = empL.size() - 1; i > 0; i--) {
+			for (int j = 0; j < 1; j++) {
+				if (empL.get(j).getSalary() > empL.get(j + 1).getSalary()) {
+					Employee sor = empL.get(j);
+					empL.set(j, empL.get(j + 1));
+					empL.set(j + 1, sor);
+				}
+			}
 		}
+		System.out.println("Sorted by salary:");
+		for (Employee ob : empL) {
+			ob.introduceEmployee();
+		}
+
+		//TODO 3 create instance of the Person ->
+		// than make them Student
+		// than make them Employee
+		//		System.out.println() result
+		Person Man1 = new Person("Anna ", "Ivanova ", 20 );
+		Person Man2 = new Person();
+		Person Man3 = new Person();
+		Person Man4 = new Person();
+		Person Man5 = new Person();
+
+		//System.out.println(Man.introduce());
+
+		Man1 = new Student("RTU");
+		Man1 = new Employee(1,"SIA BBC", "Manager", 1000 );
+
+		//TODO 4 Create method for total change employee information
+		// for example some employee change his work
+
+		A.changeWork("SIA Intel");
+
+
 	}
-
-
-	
-	
-
+}

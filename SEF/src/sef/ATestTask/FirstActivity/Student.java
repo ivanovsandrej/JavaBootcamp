@@ -3,6 +3,8 @@ package sef.ATestTask.FirstActivity;
 
 //TODO Implement class Student
 
+import sef.ATestTask.FirstActivity.Person;
+
 public class Student extends Person {
 
     private String schoolName;
