@@ -1,35 +1,55 @@
 package sef.ATestTask.SecondActivity;
-// Complete Code
+
 import junit.framework.TestCase;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
-public class SecondActivityTest extends TestCase {
+import static org.junit.Assert.*;
 
-	private SecondActivity theCalculator;
+public class SecondActivityTest extends TestCase{
+    private SecondActivity theCalculator;
+    @Before
+    protected void setUp() throws Exception {
+        super.setUp();
+        //	Initialize variables to be used here
+        theCalculator = new SecondActivity();
+    }
 
-	protected void setUp() throws Exception {
-		super.setUp();
-		//	Initialize variables to be used here
-		theCalculator = new SecondActivity();
-	}
+    @After
+    protected void tearDown() throws Exception {
+        super.tearDown();
+    }
 
-	protected void tearDown() throws Exception {
-		super.tearDown();
-	}
+    @Test
+    public void addPositive() throws Exception {
+    }
+    @Test
+    public void addNegative() throws Exception {
+    }
 
-	//Example ->
-	@Test
-	public void testGetSumPositiveValue() {
-		assertEquals(15, (theCalculator.getSum(5, 10)));
-		assertEquals(15, (theCalculator.getSum(10, 5)));
-	}
+    @Test
+    public void subtract() throws Exception {
+    }
 
-	//Example ->
-	@Test
-	public void testGetSumNegativeValue() {
-		assertEquals(5, (theCalculator.getSum(-5, 10)));
-		assertEquals(-5, (theCalculator.getSum(5, -10)));
-	}
+    @Test
+    public void subtractNegative() throws Exception {
+    }
+    @Test
+    public void multiply() throws Exception {
+    }
+    @Test
+    public void multiplyNegative() throws Exception {
+    }
+
+    @Test
+    public void divide() throws Exception {
+    }
+    @Test
+    public void divideNegative() throws Exception {
+    }
+    @Test
+    public void divideZero() throws Exception {
+    }
 
 }
-

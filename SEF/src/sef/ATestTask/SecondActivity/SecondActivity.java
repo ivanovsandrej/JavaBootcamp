@@ -18,16 +18,11 @@ public class SecondActivity {
 	public int subtract(int x, int y) {
 		int diff = x-y;
 		return diff;
-	}w
+	}
 
 	// Multiply
-	public int multiply(int[] numbers) {
-		int temp = 1;
-
-		for (int i = 0; i < numbers.length; i++) {
-			temp = temp * numbers[i];
-		}
-		return temp;
+	public int multiply(int x, int y) {
+		return x*y;
 
 	}
 
